@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>dom/main.html</title>
+</head>
+<body>
+  <div id="addForm">
+    <form action="" method="post" onsubmit="saveFnc()"><br>
+  ID: <input type="text" name="uid" id="userId" value="GoRoad"><br>
+  NAME : <input type="text" name="uname" id="userName" value="고길동"><br>
+  SCORE :  <input type="text" name="uscore" id="userScore" value="80"><br>
+  AGE : <input type="text" name="uage" id="userAge" value="19"><br>
+  <input type="submit" value="저장">
+</form>
+</div>
+
+<div id="show">
+  <table border="1">
+    <thead>
+      <tr>
+        <th>아이디</th>
+        <th>이름</th>
+        <th>점수</th>
+        <th>나이</th>
+      </tr>''
+    </thead>
+    <tbody id=""body">
+    </tbody>
+  </table>
+</div>
+
+<script>
+console.log(document.forms['frm'].elements['uid'].value);
+function saveFnc(e) {
+ e.preventdefault();       //기본 기능을 차단
+ let id = document.forms['frm'].elements['uid'].value;
+ let named = document.forms['frm'].elements['uname'].value;
+ let score = document.forms['frm'].elements['uscore'].value;
+ let age = document.forms['frm'].elements['uage'].value;
+
+let person = {}
+person.id = id;
+person.name = name;
+person.score = score;
+person.age = age;
+
+document.getElementById('body').appendChild(person);
+}
+  
+
+function makeTr(obj) {
+let tr = document.createElement('tr');
+
+let td = document.createElement('td');
+td.innerHTML = id;
+tr.appendChild(td);
+     
+
+
+}
+
+
+
+
+</script>
+</body>
+
+</html>
+
