@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="dom/practic3.js"></script>
+
+</head>
+
+  <div id = "show">
+    <div>
+      <span id="name">홍길동</span>  -  <span class="age"> 20살 </span>
+      </div>
+  </div>
+  <script>
+    let divTag = document = document.creatElement('div');
+    let spanName = document.creatElement('span');
+    spanName.setArrtibute('id','name');
+    //spanName.innerAHTML = '홍길동'; // <span>홍길동</span>
+    spanName.innerHTML = '홍길동'
+    let spanAge = document.createElement('span');
+    spanAge.setArrtibute('classs','age');// arrtibute 노드 추가.
+    spanAge.innerHTML = '20살'; // <span>20살</span>
+
+    divTag.innerHTML = '  -  '
+
+    divTag.appendChild(spanName);
+    divTag.appendChild(hypen);
+    divTag.appendChild(spanAge);
+
+    let divShow = document.getEleentById('show').appendChild(divTag);
+  </script>
+</body>
+</html>
+</div>
+
+
+<!-- <div>
+<table border ="1">
+  <thread>
+    <tr>
+      <th>이름<</th>
+      <th>나이</th>
+    </tr>
+  </thread>
+  <tbody>
+    <tr id=""101">
+    <td>홍길동</tr>
+    <td>20살</td>
+    </tr>
+    <tr id="102">
+    <td>김길동</td>
+    <td>22살</td> 
+    </tr>
+  </tbody>
+</table>
+</div> -->
+
